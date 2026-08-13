@@ -170,10 +170,46 @@ Design Reference: [URL/screenshot/Figma if provided, else "none"]
 10. KEY EFFECTS: [scroll reveals, hover states, transitions — specific, not "animations"]
 11. ANTI-PATTERNS: [what's avoided for this specific project]
 12. ACCEPTANCE: [testable conditions, checkbox list]
-13. DESIGN EVIDENCE: [list 3-5 real product screens that informed this design]
-    — must come from Mobbin search, user-provided reference, or Figma MCP
+13. DESIGN EVIDENCE: [2-5 citations, each labeled with its Evidence Class]
+    — aesthetic decisions → [PRODUCT]: real screens from Mobbin search,
+      user-provided reference, Figma MCP, or search.py results
+    — factual / a11y / performance claims → [STANDARD]: WCAG 2.1, W3C, MDN,
+      official framework docs
+    — judgment calls → [HEURISTIC]: reasoning stated, labeled as judgment
     — "invented from training data" is not valid evidence
     — if Mobbin MCP unavailable, cite search.py results or user references
+14. FALLBACK/EXCEPTION: [one line — when this design is the WRONG answer + pivot]
+    — the "when NOT to use" clause: state the condition that breaks this design
+    — e.g., "Wrong for low-trust verticals (spam-heavy): needs dense trust signals,
+      not minimalism" or "Breakpoints assume content-first; breaks for data-dense admin"
+```
+
+### Decision Briefs (per major design choice)
+
+Every **named design choice** — style, layout pattern, typography pairing, color palette, stack/framework (when a choice exists), security-level handling — gets a Decision Brief with all five parts (never fewer):
+
+```
+DECISION BRIEF — [choice, e.g., "Typography pairing"]
+  Advantages           : what improves by choosing it
+  Disadvantages        : what you give up or accept
+  Alternatives         : what else exists — including doing nothing
+  Appropriate when     : the conditions where it is the right call
+  Inappropriate when   : the conditions where it is the WRONG call (→ field 14)
+```
+
+Definitions and token values are **not** decisions — no brief per hex value or per rule. Keep the brief scoped or it stops being read.
+
+### Decision Framework (per major architectural choice)
+
+For stack/framework, state-management, data-fetching, and security-level choices, add the consequences chain:
+
+```
+Problem       : what is being decided
+Constraints   : time, scale, team size, compliance, performance budget
+Options       : the fair list (including doing nothing)
+Tradeoffs     : advantages/disadvantages of each option
+Decision      : the pick, and under which conditions
+Consequences  : what this commits you to later (lock-in, maintenance, migration)
 ```
 
 ### Design Tokens Output
@@ -610,10 +646,12 @@ See full reference: `references/i18n.md`
 
 ## PHASE 5 — PRE-DELIVERY CHECKLIST + QUALITY GATE
 
-### Step 1: Anti-Slop Script
+### Step 1: Anti-Slop Check (tool-verified, fallback chain)
 ```bash
-bash scripts/anti-slop.sh <project-directory>
+python scripts/anti_slop.py <project-directory>     # primary — cross-platform (win/mac/linux)
 ```
+If Python is unavailable: `bash scripts/anti-slop.sh <dir>` (git bash). If bash is also
+unavailable: work the manual AI-slop checklist in `references/quality-gate.md` and say so.
 Paste full output. Fix any violations before proceeding.
 
 ### Step 2: Self-Score (0-120)

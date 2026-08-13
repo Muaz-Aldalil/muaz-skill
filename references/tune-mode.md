@@ -26,7 +26,7 @@ Rank changes by user impact:
 - [LOW]    [Change] — expected improvement
 ```
 
-**Decision Brief:** Best case / Realistic / Risks for each change.
+**Decision Brief:** per change (5-part: Advantages / Disadvantages / Alternatives / Appropriate when / Inappropriate when). Diminishing returns on flip-flop — if the brief says the change is inappropriate for this project's context, propose the alternative instead.
 
 ## STEP 3 — IMPLEMENT
 

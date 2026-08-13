@@ -533,6 +533,45 @@ python -m unittest tests.test_compositions_regression -v
 
 ---
 
+---
+
+# Muaz-v3 v4.2.0 — Handbook-Driven Hardening (COMPLETED 2026-08)
+
+> Spec: `IMPROVEMENT-PLAN.md`. Additive, no breaking changes, no data/schema changes.
+> All changes verified: 40 unit tests OK, search engine smoke OK, graph gate 30/30, threshold scan clean.
+
+| ID | Change | Files |
+|---|---|---|
+| T-1 | Decision Brief upgraded to 5-part tradeoff contract (scoped to named design choices) | `SKILL.md`, `references/build-mode.md`, `references/tune-mode.md`, `references/design-tokens.md` |
+| T-2 | Decision Framework block (Problem → Constraints → Options → Tradeoffs → Decision → Consequences) | `references/build-mode.md` |
+| T-3 | Blueprint field 14 FALLBACK/EXCEPTION (when NOT to use) | `references/build-mode.md` |
+| T-4 | Evidence classes `[STANDARD]`/`[PRODUCT]`/`[HEURISTIC]` | `references/build-mode.md`, `references/design-reference-workflow.md` |
+| S-1 | `references/reference-graph.md` — 30-node registry, meta layer, invariants | new |
+| S-2 | `references/glossary.md` — 25 terms, single source | new |
+| S-3 | `references/checklist-index.md` + new `references/CHK-delivery.md` | new |
+| S-4 | README (EN+AR) map tables → pointer to reference-graph | `README.md` |
+| A-1 | Hard rule 15: challenge flawed requests with evidence | `SKILL.md` |
+| A-2 | Hard rule 16 + DECISIONS.md assumption trigger | `SKILL.md`, `references/memory-system.md` |
+| A-3 | LESSONS block in PROGRESS.md (worked/failed/corrected, keep 5) | `references/memory-system.md` |
+| Q-1 | Unified thresholds: 0-120, 96-120 ship / 72-95 revise / <72 redesign | `SKILL.md`, `references/quality-gate.md` |
+| Q-2 | `scripts/anti_slop.py` — cross-platform port (regexes from tests), `.sh` legacy | new + `tests/test_anti_slop.py` |
+| M-1 | Version sweep 4.1.0 → 4.2.0 | `SKILL.md`, `references/memory-system.md`, `templates/AGENTS.md` |
+| M-2 | Status & Review section + changelog in SKILL.md | `SKILL.md` |
+
+**Verification commands that passed:**
+
+```
+python -m unittest discover tests/ -v        # 40 tests OK
+python scripts/search.py "SaaS dashboard" --design-system -p Verify   # smoke OK
+python scripts/anti_slop.py tests/           # RESULT: CLEAN
+python graph_gate.py                          # 30 files ↔ 30 nodes, no orphans
+# threshold + version-sweep scans clean (changelog history rows exempt)
+```
+
+**Sync:** changed set copied to `~/.config/opencode/skills/muaz-v3/`, SHA-256 verified (0/34 mismatches). Restart opencode to load.
+
+---
+
 ## Key Findings from Re-Review
 
 1. **Data bug found:** Content Footer row in compositions.csv has shifted columns — `style_tags` is missing, causing all fields to shift left. This affects search quality today.

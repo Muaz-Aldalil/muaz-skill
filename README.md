@@ -25,25 +25,10 @@
 
 ### Extended References
 
-| Area | File |
-|---|---|
-| Error Monitoring & RUM | `references/error-monitoring.md` |
-| SEO & Structured Data | `references/seo.md` |
-| PWA & Offline | `references/pwa-offline.md` |
-| Feature Flags | `references/feature-flags.md` |
-| Real-Time / WebSocket | `references/realtime.md` |
-| Storybook & Visual Testing | `references/storybook.md` |
-| Forms & Validation | `references/forms.md` |
-| API Patterns | `references/api-patterns.md` |
-| Analytics & GDPR | `references/analytics.md` |
-| i18n & RTL | `references/i18n.md` |
-| Project Brief Management | `references/project-brief.md` |
-| Code & API Standards | `references/code-standards.md` |
-| Security Levels | `references/security-levels.md` |
-| Premium Design Guide | `references/premium-design-guide.md` |
-| Quality Gate | `references/quality-gate.md` |
-| Design Reference Workflow | `references/design-reference-workflow.md` |
-| MCP Setup | `references/mcp-setup.md` |
+The full reference inventory — every file, its phase, and its prerequisites — lives in
+[`references/reference-graph.md`](references/reference-graph.md) (single source of truth).
+Terminology: [`references/glossary.md`](references/glossary.md). Checklists:
+[`references/checklist-index.md`](references/checklist-index.md).
 
 ### Templates
 
@@ -143,25 +128,10 @@ database and search engine (67 styles, 161 color palettes, 161 product types,
 
 ### المراجع الموسعة
 
-| المجال | الملف |
-|---|---|
-| مراقبة الأخطاء | `references/error-monitoring.md` |
-| تحسين محركات البحث | `references/seo.md` |
-| التطبيق دون اتصال | `references/pwa-offline.md` |
-| أعلام الميزات | `references/feature-flags.md` |
-| الاتصال المباشر | `references/realtime.md` |
-| Storybook | `references/storybook.md` |
-| النماذج والتحقق | `references/forms.md` |
-| أنماط API | `references/api-patterns.md` |
-| التحليلات وGDPR | `references/analytics.md` |
-| التدويل وRTL | `references/i18n.md` |
-| إدارة ملخص المشروع | `references/project-brief.md` |
-| معايير الكود وAPI | `references/code-standards.md` |
-| مستويات الأمان | `references/security-levels.md` |
-| دليل التصميم المميز | `references/premium-design-guide.md` |
-| بوابة الجودة | `references/quality-gate.md` |
-| سير عمل مرجع التصميم | `references/design-reference-workflow.md` |
-| إعداد MCP | `references/mcp-setup.md` |
+القائمة الكاملة للمراجع — كل ملف ومرحلته ومتطلباته المسبقة — موجودة في
+[`references/reference-graph.md`](references/reference-graph.md) (المصدر الوحيد).
+المصطلحات: [`references/glossary.md`](references/glossary.md). القوائم:
+[`references/checklist-index.md`](references/checklist-index.md).
 
 ### القوالب
 

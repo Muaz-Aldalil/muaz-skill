@@ -8,12 +8,14 @@ Scoring rubric + enforcement flow. Agent MUST score before claiming done. No exc
 
 ```
 Phase 5:
-  1. Run anti-slop.sh → fix any pattern violations
+  1. Run anti_slop.py (fallback: anti-slop.sh, then manual checklist) → fix violations
   2. Self-score below → get total (0-120)
   3. If total < 96 → fix weakest dimension → re-score
-  4. Max 3 iterations. If still < 96 after 3 → redesign from Phase 3.
-  5. Paste final score + anti-slop.sh output as proof.
+  4. Max 3 iterations. If still < 72 after 3 → redesign from Phase 3.
+  5. Paste final score + tool output as proof.
 ```
+
+Registered as `CHK-quality` in `references/checklist-index.md`.
 
 **Highest-leverage rule:** Do not claim "done" without tool-verified proof. Paste the proof in your response. Verbal assertions without tool evidence are defects.
 
@@ -137,7 +139,7 @@ Manual checks (agent must verify):
 
 Before claiming "done", the agent MUST paste:
 
-1. **anti-slop.sh output** — full script output showing CLEAN or violations fixed
+1. **anti-slop output** — full tool output (python or shell) showing CLEAN or violations fixed
 2. **Self-score** — scores for all 6 dimensions with rationale
 3. **Total score** — sum with ship/revise/redesign decision
 4. **If revised** — what changed between iterations

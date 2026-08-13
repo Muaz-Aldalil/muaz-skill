@@ -8,7 +8,7 @@ Platform        : [Web / Mobile-first / Both]
 Theme           : [Light / Dark / Light+Dark]
 Monitoring      : [Sentry / Datadog / PostHog / None]
 Team            : [size + level]
-Skill           : Muaz-v3 v4.1.0
+Skill           : muaz-skill v4.2.0
 
 ## Design System (Summary)
 Primary   : #[hex]

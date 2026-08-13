@@ -1,4 +1,4 @@
-# Muaz-v3 Design Rules
+# muaz-skill Design Rules
 
 Priority order: User explicit request > These rules > Defaults
 

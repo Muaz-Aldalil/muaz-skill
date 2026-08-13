@@ -163,12 +163,14 @@ When user has NO design reference — use Mobbin to search real shipped screens 
 - **CTA placement**: Where are the primary actions?
 
 ### Citing Evidence
-In blueprint field 13, format as:
+In blueprint field 13, format as — aesthetic citations get `[PRODUCT]`; factual/a11y/perf claims must cite `[STANDARD]` sources (WCAG 2.1, W3C, MDN, official framework docs); judgment is `[HEURISTIC]`:
 ```
 DESIGN EVIDENCE:
-- Stripe.com pricing: 3-tier grid, annual toggle, feature comparison table
-- Linear.app pricing: clean cards, highlighted middle tier, no feature table
-- Vercel.com pricing: usage-based, simple 2-tier, calculator
+- Stripe.com pricing: 3-tier grid, annual toggle, feature comparison table [PRODUCT]
+- Linear.app pricing: clean cards, highlighted middle tier, no feature table [PRODUCT]
+- Vercel.com pricing: usage-based, simple 2-tier, calculator [PRODUCT]
+- WCAG 2.1 SC 1.4.3: contrast >= 4.5:1 for normal text [STANDARD]
+- MDN <table>: tabular data must use real <table>, not divs [STANDARD]
 ```
 
 ---

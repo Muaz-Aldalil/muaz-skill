@@ -1,6 +1,6 @@
 # MCP Setup — Design Intelligence
 
-How to configure MCPs for Muaz-v3. MCPs are optional enhancements — the skill works without them, but design quality improves significantly with Mobbin.
+How to configure MCPs for muaz-skill. MCPs are optional enhancements — the skill works without them, but design quality improves significantly with Mobbin.
 
 ---
 

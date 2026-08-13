@@ -64,7 +64,7 @@ Security Level  : [L1/L2/L3 — auto-detected]
 Platform        : [Web / Mobile-first / Both]
 Theme           : [Light / Dark / Light+Dark]
 Team            : [size + level from intake]
-Skill           : Muaz-v3 v4.1.0
+Skill           : muaz-skill v4.2.0
 
 ## Design System (Summary)
 Primary   : #[hex] — [usage]
@@ -118,6 +118,12 @@ AFTER EACH SESSION (before closing):
     - Specific first task for next session
     - Any new blockers
 
+AFTER PHASE 5 (delivery, per CHK-delivery):
+  -> Append a LESSONS block — what worked, what failed, what to correct next time
+  FORMAT (keep the last 5 entries, oldest out):
+    ## LESSONS
+    - L-<YYYY-MM-DD>: worked=[what worked] failed=[what failed] correct=[what to do differently]
+
 FORMAT for session closing line:
   "🔖 Session complete. Updated PROGRESS.md.
    Next session starts with: [specific first task]"
@@ -135,6 +141,8 @@ MUST LOG (blocks are yellow flags for future devs):
   -> Deviating from skill defaults (using localStorage instead of httpOnly cookie — why?)
   -> Workarounds for bugs or constraints
   -> Any decision that cost > 10 minutes to make
+  -> Any assumption that will shape the design (log BEFORE it shapes the design —
+     an assumption logged after the fact is a decision made silently)
 
 DO NOT LOG:
   -> Color adjustments
